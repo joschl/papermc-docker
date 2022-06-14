@@ -9,7 +9,7 @@ ENV MC_VERSION="latest" \
 
 COPY papermc.sh .
 RUN apk update --no-cache \
-    && apk install -y wget jq --no-cache \
+    && apk install wget jq --no-cache \
     && mkdir /papermc
 
 # Start script
