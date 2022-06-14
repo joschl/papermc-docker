@@ -8,9 +8,8 @@ ENV MC_VERSION="latest" \
     JAVA_OPTS=""
 
 COPY papermc.sh .
-RUN apk update --no-cache \
-    && apk install wget jq --no-cache \
-    && mkdir /papermc
+RUN  apk add wget jq --no-cache && \
+     mkdir /papermc
 
 # Start script
 CMD ["sh", "./papermc.sh"]
